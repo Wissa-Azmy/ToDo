@@ -1,0 +1,5 @@
+// In every CodeIgniter Project the following files needs to be copied to the new project:
+- the global .htaccess file
+- the database.php file
+- the config.php file
+- the autoload.php file
