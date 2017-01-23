@@ -10,7 +10,7 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="http://localhost/ToDo/public/js/bootstrap.min.js"></script>
-
+<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
 <title>ToDo Task Manager</title>
 </head>
 
@@ -69,14 +69,15 @@
 									<a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
 								</div>
                                 or
-								 <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+								 <form class="form" role="form" method="post" action="users/login" accept-charset="UTF-8" id="login-nav">
+								
 										<div class="form-group">
-											 <label class="sr-only" for="exampleInputEmail2">Email address</label>
-											 <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
+											 <label class="sr-only" for="exampleInputEmail2">Username</label>
+											 <input type="text" name="username" class="form-control" id="exampleInputEmail2" placeholder="Username" required>
 										</div>
 										<div class="form-group">
 											 <label class="sr-only" for="exampleInputPassword2">Password</label>
-											 <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+											 <input type="password" name="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
                                              <div class="help-block text-right"><a href="">Forget the password ?</a></div>
 										</div>
 										<div class="form-group">
@@ -88,6 +89,7 @@
 											 </label>
 										</div>
 								 </form>
+								
 							</div>
 							<div class="bottom text-center">
 								New here ? <a href="http://localhost/ToDo/index.php/users/register"><b>Join Us</b></a>

@@ -24,3 +24,6 @@
   <button class= "btn btn-primary" type="submit">Sign Up</button>
     
 <?php echo form_close(); ?>
+
+
+

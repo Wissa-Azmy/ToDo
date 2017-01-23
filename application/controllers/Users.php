@@ -13,7 +13,7 @@ class Users extends CI_Controller{
 			$this->load->view('layouts/main', $data);
 		} else {
 			if($this->User->create_member()){
-				$this->session->set_flashdata('regestered', 'You have registered successfully');
+				$this->session->set_flashdata('registered', 'You have registered successfully');
 				redirect('http://localhost/ToDo/index.php/home/index');
 			}
 
@@ -27,8 +27,10 @@ class Users extends CI_Controller{
 		if($this->form_validation->run() == FALSE){
 
 		}	else{
-			$username = $this->input->post('username');
-			$password = $this->input->post('password');
+			// $username = $this->input->post('username');
+			// $password = $this->input->post('password');
+			$username = 'wissa';
+			$password = 'password';
 
 			$user_id = $this->User->login_user($username, $password);
 
@@ -41,7 +43,8 @@ class Users extends CI_Controller{
 
 				$this->session->set_userdata($user_data);
 
-				redirect('http://localhost/ToDo/index.php/home/indexx');
+				$this->session->set_flashdata('login_success', 'You have Logged in successfully');
+				redirect('http://localhost/ToDo/index.php/home/index');
 			} else{
 				// SET ERROR 
 				$this->session->set_flashdata('login_failed', 'Login Failed check your username and password');
