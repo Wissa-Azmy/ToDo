@@ -24,10 +24,10 @@ class User extends CI_Model
 		$enc_password = md5($password);
 
 		//WHERE CLAUSES 
-		$this->db->WHERE('username', $username);
-		$this->db->WHERE('password', $password);
+		// $this->db->where('username', $username);
+		// $this->db->where('password', $password);
 
-		$result = $this->db->get('users');
+		$result = $this->db->get_where('users', array('username' => $username, 'password' => $enc_password), 1);
 
 		if($result->num_rows() == 1 ){
 			return $result->row(0)->id;

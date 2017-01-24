@@ -27,10 +27,8 @@ class Users extends CI_Controller{
 		if($this->form_validation->run() == FALSE){
 
 		}	else{
-			// $username = $this->input->post('username');
-			// $password = $this->input->post('password');
-			$username = 'wissa';
-			$password = 'password';
+			$username = $this->input->post('username');
+			$password = $this->input->post('password');
 
 			$user_id = $this->User->login_user($username, $password);
 
@@ -51,5 +49,16 @@ class Users extends CI_Controller{
 				redirect('http://localhost/ToDo/index.php/home/index');
 			}
 		}	
+	}
+
+	public function logout(){
+		//UNSET SESSION DATA
+		$this->session->unset_userdata('logged_in');
+		$this->session->unset_userdata('user_id');
+		$this->session->unset_userdata('username');
+
+		$this->session->sess_destroy();
+
+		redirect('http://localhost/ToDo/index.php/home/index');
 	}
 }
