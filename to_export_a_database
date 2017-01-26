@@ -1,0 +1,10 @@
+To Export a Database:-
+>> mysqldump -u [username] -p [database_name] > [dumpfilename.sql]
+replace each variable in brackets with the proper values and do not include the brackets
+to compress the file:-
+>> tar zcf dumpfilename.tar.gz dumpfilename.sql
+to decompress the file:-
+>> tar zxf dumpfilename.tar.gz
+to import the database into your MySQl Server:-
+>> mysql -u [username] -p [database_name] < [dumpfilename.sql]
+

@@ -11,6 +11,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="http://localhost/ToDo/public/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+
 <title>ToDo Task Manager</title>
 </head>
 
@@ -149,5 +150,8 @@
 </div><!-- span9 -->
 
 </body>
+<script src="http://localhost/ToDo/public/js/app.js"></script>
 
 </html> 
+
+
