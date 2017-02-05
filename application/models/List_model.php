@@ -16,6 +16,8 @@ class List_model extends CI_Model
 	public function get_list_tasks($id, $completed){
 
 	}
-
+	public function create_list($data){
+		$query = $this->db
+	}
 
 }
