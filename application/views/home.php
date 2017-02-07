@@ -15,6 +15,10 @@
 		<p class="alert alert-dismissable alert-success"><?php echo $this->session->flashdata('login_success'); ?></p>
 <?php endif; ?>
 
+<?php if($this->session->flashdata('list_created')) : ?>
+		<p class="alert alert-dismissable alert-success"><?php echo $this->session->flashdata('list_created'); ?></p>
+<?php endif; ?>
+
 <div class="container">
 	<h1>Welcome to Scope ToDo App</h1>
 	<p>Scope ToDo is a simple and helpful application to help the IT staff finsih their tasks</p>

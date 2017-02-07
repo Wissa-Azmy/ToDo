@@ -17,7 +17,8 @@ class List_model extends CI_Model
 
 	}
 	public function create_list($data){
-		$query = $this->db
+		$query = $this->db->insert('lists', $data);
+		return $insert;
 	}
 
 }

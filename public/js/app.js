@@ -4,7 +4,7 @@ $(".create_task").click(function(event) {
     console.log('clicked');
 
     
-    $('#edit-modal').modal();
+    $('#create-modal').modal();
 });
 
 $('#list-create').click(function () {
@@ -15,6 +15,7 @@ $('#list-create').click(function () {
     })
     .done(function(msg){
         // $(taskTitle).text(msg['new-title']);
-        $('#edit-modal').modal('hide');
+        window.location="http://localhost/todo/lists/index";
+        $('#create-modal').modal('hide');
     });
 });

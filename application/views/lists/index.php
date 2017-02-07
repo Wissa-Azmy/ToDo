@@ -1,3 +1,15 @@
+<?php if($this->session->flashdata('list_created')) : ?>
+        <p class="alert alert-dismissable alert-success"><?php echo $this->session->flashdata('list_created'); ?></p>
+<?php endif; ?>
+
+<?php if($this->session->flashdata('list_updated')) : ?>
+        <p class="alert alert-dismissable alert-success"><?php echo $this->session->flashdata('list_updated'); ?></p>
+<?php endif; ?>
+
+<?php if($this->session->flashdata('list_deleted')) : ?>
+        <p class="alert alert-dismissable alert-success"><?php echo $this->session->flashdata('list_deleted'); ?></p>
+<?php endif; ?>
+
 <ul class="list_items">
 <?php foreach ($lists as $list) : ?>
 	
@@ -24,7 +36,7 @@
 
 
 <!--***************** EDIT MODAL ******************* -->
-<div class="modal fade" tabindex="-1" role="dialog" id="edit-modal">
+<div class="modal fade" tabindex="-1" role="dialog" id="create-modal">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
