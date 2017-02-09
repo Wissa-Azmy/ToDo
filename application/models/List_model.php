@@ -21,4 +21,9 @@ class List_model extends CI_Model
 		return $insert;
 	}
 
+	public function get_list_data($list_id){
+		$query = $this->db->get('lists', array('id' => $list_id));
+		return $query->row();
+	}
+
 }
