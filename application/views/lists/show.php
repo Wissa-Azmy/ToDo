@@ -7,7 +7,7 @@
 	<li><a onclick="return confirm('Are you Sure?')" href="http:/localhost/ToDo/index.php/tasks/delete/<?php echo $list->id; ?>">Delete List</a></li>
 </ul>
 
-<p><a href="#" id="edit_list" class="btn btn-primary edit_list"> Create a New List</a></p>
+<p><a href="#" id="edit_list" class="btn btn-primary edit_list"> Edit List</a></p>
 
 <h1><?php echo $list->list_name; ?></h1>
 Created on <strong><?php echo date('n-j-y', strtotime($list->create_date)); ?></strong>

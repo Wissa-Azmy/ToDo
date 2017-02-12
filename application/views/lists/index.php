@@ -27,7 +27,7 @@
 <?php endforeach; ?>
 </ul>
 </br>
-<p><a href="#" id="create_list" class="btn btn-primary create_task"> Create a List</a></p>
+<p><a href="#" id="create_list" class="btn btn-primary create_list"> Create a List</a></p>
 
 
 
