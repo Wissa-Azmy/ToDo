@@ -27,7 +27,7 @@
 <?php endforeach; ?>
 </ul>
 </br>
-<p><a href="#" id="create_task" class="btn btn-primary create_task"> Create a New List</a></p>
+<p><a href="#" id="create_list" class="btn btn-primary create_task"> Create a List</a></p>
 
 
 
@@ -35,7 +35,7 @@
 
 
 
-<!--***************** EDIT MODAL ******************* -->
+<!--***************** CREATE LIST MODAL ******************* -->
 <div class="modal fade" tabindex="-1" role="dialog" id="create-modal">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
