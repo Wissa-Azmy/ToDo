@@ -33,8 +33,10 @@ class List_model extends CI_Model
 	}
 
 	public function edit_list($list_id, $data){
-		$query = $this->db->update('lists', $data, ['id' => $list_id]);
-		return;
+		echo $list_id;
+		$this->db->where('id', $list_id);
+		$query = $this->db->update('lists', $data);
+		return TRUE;
 	}
 
 	public function delete_list($list_id){

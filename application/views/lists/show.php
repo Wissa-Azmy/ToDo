@@ -13,7 +13,7 @@ Created on <strong><?php echo date('n-j-y', strtotime($list->create_date)); ?></
 <br /><br />
 <div style='max-width: 500px;'><?php echo $list->list_body; ?></div>
 <br /><br />
-<?php echo 'Hello World!' ?>
+
 
 
 
@@ -40,7 +40,7 @@ Created on <strong><?php echo date('n-j-y', strtotime($list->create_date)); ?></
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-primary" id="list-update">Update</button>
+                    <button type="button" id="list-update" class="btn btn-primary update_list">Update</button>
                 </div>
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->

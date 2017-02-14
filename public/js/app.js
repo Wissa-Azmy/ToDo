@@ -30,10 +30,15 @@ $(".edit_list").click(function(event) {
 });
 
 $('#list-update').click(function(event){
+      event.preventDefault();
+
+      console.log('clicked');
+      console.log($('#list_id').val());
+
     $.ajax({
         method: 'post',
         url: 'lists/edit',
-        data: {list_name: $('#list_name').val(), list_body: $('#list_body').val()}
+        data: {list_id: $('#list_id').val(), list_name: $('#list_name').val(), list_body: $('#list_body').val()}
     })
     .done(function(data){
         window.location= "http://localhost/ToDo/lists/show/"+ $('#list_id').val();

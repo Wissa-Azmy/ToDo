@@ -61,17 +61,28 @@ class Lists extends CI_Controller{
 
 
 
-	public function edit($list_id){
+	public function edit(){
+					die('Inside Edit');
+
 		$this->form_validation->set_rules('list_name', 'List Name', 'trim|required');
 		$this->form_validation->set_rules('list_body', 'List Body', 'trim');
+		
+		$list_id = $this->input->post('list_id');
+
+			
 
 		if($this->form_validation->run() == false){
 			//Get the current list information
 			// $data['this_list'] = $this->List_model->get_list_data($list_id);
 			//Load view and layout
+						echo $list_id + "wrong<br />";
+
 			$data['main_content'] = 'lists/show/'+ $list_id;
 			$this->load->view('layouts/main', $data);
 		} else {
+
+			echo $list_id + "<br />";
+			
 			$data = [
 				'list_name' => $this->input->post('list_name'),
 				'list_body' => $this->input->post('list_body'),
