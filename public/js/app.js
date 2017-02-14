@@ -1,7 +1,7 @@
 $(".create_list").click(function(event) {
     event.preventDefault();
 
-    console.log('clicked');
+    // console.log('clicked');
 
     
     $('#create-modal').modal();
@@ -24,7 +24,19 @@ $('#list-create').click(function () {
 $(".edit_list").click(function(event) {
     event.preventDefault();
 
-    console.log('clicked');
+    // console.log('clicked');
     
     $('#edit-modal').modal();
 });
+
+$('#list-update').click(function(event){
+    $.ajax({
+        method: 'post',
+        url: 'lists/edit',
+        data: {list_name: $('#list_name').val(), list_body: $('#list_body').val()}
+    })
+    .done(function(data){
+        window.location= "http://localhost/ToDo/lists/show/"+ $('#list_id').val();
+        $('#edit-modal').modal('hide');
+    })
+})

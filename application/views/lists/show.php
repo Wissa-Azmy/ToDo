@@ -28,10 +28,13 @@ Created on <strong><?php echo date('n-j-y', strtotime($list->create_date)); ?></
                 <div class="modal-body">
                     <form>
                     	<div class="form-group">
-                            <input type="text" class="form-control" id="list_name" name="list_name" placeholder="List Name"> 
+                            <input type="text" class="form-control" id="list_name" name="list_name" value="<?php echo $list->list_name; ?>" placeholder="List Name"> 
                         </div>
+
+                        <input type="hidden" id="list_id" value="<?php echo $list->id; ?>"> 
+
                         <div class="form-group">
-                            <textarea class="form-control" name="list_body" id="list_body" rows="4" placeholder="List Body..."></textarea>
+                            <textarea class="form-control" name="list_body" id="list_body" rows="4" placeholder="List Body..."><?php echo $list->list_body; ?></textarea>
                         </div>
                     </form>
                 </div>

@@ -17,9 +17,11 @@ class List_model extends CI_Model
 				
 		return $query->row();	// WE USE ROW TO RETURN ONLY ONE RECORD
 	}
+
 	public function get_list_tasks($id, $completed){
 
 	}
+
 	public function create_list($data){
 		$query = $this->db->insert('lists', $data);
 		return $insert;
@@ -28,6 +30,11 @@ class List_model extends CI_Model
 	public function get_list_data($list_id){
 		$query = $this->db->get('lists', array('id' => $list_id));
 		return $query->row();
+	}
+
+	public function edit_list($list_id, $data){
+		$query = $this->db->update('lists', $data, ['id' => $list_id]);
+		return;
 	}
 
 	public function delete_list($list_id){
