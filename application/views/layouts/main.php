@@ -3,13 +3,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- <link rel="stylesheet" type="text/css" href="<?php base_url(); ?>public/css/bootstrap.css">-->
-<link rel="stylesheet" type="text/css" href="http://localhost/ToDo/public/css/bootstrap.css">
-<link rel="stylesheet" type="text/css" href="http://localhost/ToDo/public/css/custom.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>public/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>public/css/custom.css">
 
 <!-- <link rel="stylesheet" type="text/css" href="<?php base_url(); ?>public/css/custom.css">-->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script src="http://localhost/ToDo/public/js/bootstrap.min.js"></script>
+<script src="<?php echo base_url();?>public/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
 
 <title>ToDo Task Manager</title>
@@ -29,7 +29,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="http://localhost/ToDo/index.php/home">Scope ToDo App</a>
+      <a class="navbar-brand" href="<?php echo base_url();?>index.php/home">Scope ToDo App</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -42,7 +42,8 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="http://localhost/ToDo/index.php/lists">Lists</a></li>
+            
+            <li><a href="<?php echo base_url();?>lists">Lists</a></li>
             <li><a href="#">Another action</a></li>
             <li><a href="#">Something else here</a></li>
             <li class="divider"></li>
@@ -68,7 +69,7 @@
 						 <div class="row">
 								<div class="col-md-12">
 									
-									 <form class="form" role="form" method="post" action="users/logout" id="login-nav">
+									 <form class="form" role="form" method="post" action="<?php echo base_url();?>users/logout" id="login-nav">
 									
 											
 											<div class="form-group">
@@ -79,7 +80,7 @@
 									
 								</div>
 								<div class="bottom text-center">
-									New here ? <a href="http://localhost/ToDo/index.php/users/register"><b>Join Us</b></a>
+									New here ? <a href="<?php echo base_url();?>users/register"><b>Join Us</b></a>
 								</div>
 						 </div>
 					</li>
@@ -103,7 +104,7 @@
 										<a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
 									</div>
 	                                or
-									 <form class="form" role="form" method="post" action="users/login" id="login-nav">
+									 <form class="form" role="form" method="post" action="<?php echo base_url();?>users/login" id="login-nav">
 									
 											<div class="form-group">
 												 <label class="sr-only" for="exampleInputEmail2">Username</label>
@@ -126,7 +127,7 @@
 									
 								</div>
 								<div class="bottom text-center">
-									New here ? <a href="http://localhost/ToDo/index.php/users/register"><b>Join Us</b></a>
+									New here ? <a href="<?php echo base_url();?>users/register"><b>Join Us</b></a>
 								</div>
 						 </div>
 					</li>
@@ -150,7 +151,7 @@
 </div><!-- span9 -->
 
 </body>
-<script src="http://localhost/ToDo/public/js/app.js"></script>
+<script src="<?php echo base_url();?>public/js/app.js"></script>
 
 </html> 
 

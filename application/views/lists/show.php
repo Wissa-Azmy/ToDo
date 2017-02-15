@@ -1,10 +1,10 @@
 <ul id='actions'>
 	<h4>List Actions</h4>
-	<li><a href="http://localhost/ToDo/index.php/tasks/add/<?php echo $list->id; ?>">Add Task</a></li>
+	<li><a href="<?php echo base_url();?>tasks/add/<?php echo $list->id; ?>">Add Task</a></li>
 	
 	<li id="edit_list"><a id="edit_list" class="edit_list" href="#">Edit List</a></li>
 	
-	<li><a onclick="return confirm('Are you Sure?')" href="http://localhost/ToDo/index.php/lists/delete/<?php echo $list->id; ?>">Delete List</a></li>
+	<li><a onclick="return confirm('Are you Sure?')" href="<?php echo base_url();?>lists/delete/<?php echo $list->id; ?>">Delete List</a></li>
 </ul>
 
 

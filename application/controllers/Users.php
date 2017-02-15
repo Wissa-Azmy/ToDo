@@ -14,7 +14,7 @@ class Users extends CI_Controller{
 		} else {
 			if($this->User->create_member()){
 				$this->session->set_flashdata('registered', 'You have registered successfully');
-				redirect('http://localhost/ToDo/index.php/home/index');
+				redirect('/home/index');
 			}
 
 		}
@@ -42,11 +42,15 @@ class Users extends CI_Controller{
 				$this->session->set_userdata($user_data);
 
 				$this->session->set_flashdata('login_success', 'You have Logged in successfully');
-				redirect('http://localhost/ToDo/index.php/home/index');
+				
+				redirect('/home/index');
+
+
+
 			} else{
 				// SET ERROR 
 				$this->session->set_flashdata('login_failed', 'Login Failed check your username and password');
-				redirect('http://localhost/ToDo/index.php/home/index');
+				redirect('/home/index');
 			}
 		}	
 	}
@@ -59,6 +63,6 @@ class Users extends CI_Controller{
 
 		$this->session->sess_destroy();
 
-		redirect('http://localhost/ToDo/index.php/home/index');
+		redirect('/home/index');
 	}
 }

@@ -16,7 +16,7 @@
 	<li>
 
 	<div class="list_name">
-	<a href="http://localhost/ToDo/index.php/lists/show/<?php echo $list->id; ?>">
+	<a href="<?php echo base_url();?>lists/show/<?php echo $list->id; ?>">
 	<?php echo $list->list_name; ?>
 	</a>
 	</div>

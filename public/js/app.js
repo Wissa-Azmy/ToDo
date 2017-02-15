@@ -15,7 +15,7 @@ $('#list-create').click(function () {
     })
     .done(function(msg){
         // $(taskTitle).text(msg['new-title']);
-        window.location="http://localhost/todo/lists/index";
+        window.location="/lists/index";
         $('#create-modal').modal('hide');
     });
 });
@@ -41,7 +41,7 @@ $('#list-update').click(function(event){
         data: {list_id: $('#list_id').val(), list_name: $('#list_name').val(), list_body: $('#list_body').val()}
     })
     .done(function(data){
-        window.location= "http://localhost/ToDo/lists/show/"+ $('#list_id').val();
+        window.location= "/lists/show/"+ $('#list_id').val();
         $('#edit-modal').modal('hide');
     })
 })
