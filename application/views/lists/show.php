@@ -9,7 +9,7 @@
 
 
 <h1><?php echo $list->list_name; ?></h1>
-Created on <strong><?php echo date('n-j-y', strtotime($list->create_date)); ?></strong>
+
 <br /><br />
 <div style='max-width: 500px;'><?php echo $list->list_body; ?></div>
 <br /><br />

@@ -61,8 +61,8 @@ class Lists extends CI_Controller{
 
 
 
-	public function edit(){
-					die('Inside Edit');
+	public function update(){
+					echo'Inside Edit';
 
 		$this->form_validation->set_rules('list_name', 'List Name', 'trim|required');
 		$this->form_validation->set_rules('list_body', 'List Body', 'trim');
@@ -92,7 +92,7 @@ class Lists extends CI_Controller{
 		if($this->List_model->edit_list($list_id, $data)){
 				$this->session->set_flashdata('list_updated', 'Your task list has been updated successfully');
 				//Redirect to index page with the flashdata above
-				redirect('lists/show'+ $list_id); // NOT WORKING BCOZ REDIRECTION IS HANDLED BY AJAX
+				redirect('lists/show/'+ $list_id); // NOT WORKING BCOZ REDIRECTION IS HANDLED BY AJAX
 			}
 	}
 

@@ -33,15 +33,20 @@ $('#list-update').click(function(event){
       event.preventDefault();
 
       console.log('clicked');
-      console.log($('#list_id').val());
+      console.log($('#list_namelist_id').val());
+      console.log($('#').val());
+      console.log($('#list_body').val());
+
 
     $.ajax({
         method: 'post',
-        url: 'lists/edit',
+        url: 'lists/update',
         data: {list_id: $('#list_id').val(), list_name: $('#list_name').val(), list_body: $('#list_body').val()}
     })
     .done(function(data){
-        window.location= "/lists/show/"+ $('#list_id').val();
+      console.log(data);
+
+        window.location= "<?php echo base_url(); ?>lists/show/"+ $('#list_id').val();
         $('#edit-modal').modal('hide');
     })
 })
