@@ -1,11 +1,15 @@
-// In every CodeIgniter Project the following files needs to be copied to the new project or edited:
+// In every CodeIgniter Project the following files ought to be added or edited:
 - the global .htaccess file
 - the database.php file
 - the config.php file
 - the autoload.php file
-// Using sudo edit your apache2 config file in the following path
+
+
+/********** To remove the index.php from the URL ***********/
+// Using sudo edit your apache2 000-default.conf file to allow override using the following command
 sudo vi /etc/apache2/sites-available/000-default.conf
-// and add the following directive in side the virtual host main directive
+// and add the following directive inside the virtualhost main directive just after the <Directory /var/www/></Directory>
+
 		<Directory /var/www/html/AppFolder/>
                 AllowOverride All
         </Directory>
