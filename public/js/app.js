@@ -32,10 +32,10 @@ $(".edit_list").click(function(event) {
 $('#list-update').click(function(event){
       event.preventDefault();
 
-      console.log('clicked');
-      console.log($('#list_namelist_id').val());
-      console.log($('#').val());
-      console.log($('#list_body').val());
+      // console.log('clicked');
+      // console.log($('#list_namelist_id').val());
+      // console.log($('#').val());
+      // console.log($('#list_body').val());
 
 
     $.ajax({

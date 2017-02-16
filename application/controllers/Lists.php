@@ -62,7 +62,7 @@ class Lists extends CI_Controller{
 
 
 	public function update(){
-					echo'Inside Edit';
+					// echo'Inside Edit';
 
 		$this->form_validation->set_rules('list_name', 'List Name', 'trim|required');
 		$this->form_validation->set_rules('list_body', 'List Body', 'trim');

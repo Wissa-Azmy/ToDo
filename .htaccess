@@ -1,8 +1,11 @@
 Options +FollowSymLinks
 Options -Indexes
 DirectoryIndex index.php
+
 RewriteEngine on
 RewriteCond $1 !^(index\.php|assests|images|css|js|install|robots\.txt|favicon\.ico)
 RewriteCond %{Request_FILENAME} !-f
 RewriteCond %{Request_FILENAME} !-d
 RewriteRule ^(.*)$ index.php/$1 [L,QSA]
+
+

@@ -1,5 +1,12 @@
-// In every CodeIgniter Project the following files needs to be copied to the new project:
+// In every CodeIgniter Project the following files needs to be copied to the new project or edited:
 - the global .htaccess file
 - the database.php file
 - the config.php file
 - the autoload.php file
+// Using sudo edit your apache2 config file in the following path
+sudo vi /etc/apache2/sites-available/000-default.conf
+// and add the following directive in side the virtual host main directive
+		<Directory /var/www/html/AppFolder/>
+                AllowOverride All
+        </Directory>
+
