@@ -28,17 +28,19 @@ class List_model extends CI_Model
 	}
 
 	public function get_list_data($list_id){
-		$query = $this->db->get('lists', array('id' => $list_id));
+		$query = $this->db->get_where('lists', array('id' => $list_id));
 		return $query->row();
 	}
 
 	public function edit_list($list_id, $data){
-		echo $list_id;
+		echo "list ID: " + $list_id;
 		$this->db->where('id', $list_id);
-		$query = $this->db->update('lists', $data);
+		$this->db->update('lists', $data);
+		$query = $this->db->get_where('lists', ['id' => $list_id]);
 
-		$updated_list = get_list_data($list_id);
-		return $updated_list;
+
+		// $updated_list = get_list_data($list_id);
+		return $query->row();
 	}
 
 	public function delete_list($list_id){

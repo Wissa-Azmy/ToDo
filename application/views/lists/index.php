@@ -17,7 +17,7 @@
 
 	<div class="list_name">
 	<a href="<?php echo base_url();?>lists/show/<?php echo $list->id; ?>">
-	<?php echo $list->list_name; ?>
+	   <?php echo $list->list_name; ?>
 	</a>
 	</div>
 	<div class="list_body"><?php echo $list->list_body; ?></div>

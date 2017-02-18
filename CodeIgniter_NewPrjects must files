@@ -7,10 +7,12 @@
 
 /********** To remove the index.php from the URL ***********/
 // Using sudo edit your apache2 000-default.conf file to allow override using the following command
-sudo vi /etc/apache2/sites-available/000-default.conf
+	sudo vi /etc/apache2/sites-available/000-default.conf
 // and add the following directive inside the virtualhost main directive just after the <Directory /var/www/></Directory>
 
 		<Directory /var/www/html/AppFolder/>
                 AllowOverride All
         </Directory>
-
+        
+// and then restart the apache service using:
+	sudo service apache2 restart

@@ -21,7 +21,7 @@ class Lists extends CI_Controller{
 
 
 	public function show($list_id){
-		$data = [];
+		// $data = [];
 		$data['list'] = $this->List_model->get_list($list_id);
 		$data['completed_tasks'] = $this->List_model->get_list_tasks($list_id, true); 
 		$data['uncompleted_tasks'] = $this->List_model->get_list_tasks($list_id, false);  // TRUE & FALSE above are for the boolean completed field 
@@ -32,6 +32,18 @@ class Lists extends CI_Controller{
 		$this->load->view('layouts/main', $data);
 
 	}
+
+	public function edit_list($list_id){
+		// $data = [];
+		$data['list'] = $this->List_model->get_list($list_id);
+
+		$data['main_content'] = 'lists/edit';
+
+
+		$this->load->view('layouts/main', $data);
+
+	}
+
 
 
 
@@ -69,19 +81,22 @@ class Lists extends CI_Controller{
 		
 		$list_id = $this->input->post('list_id');
 
-			
+		echo $list_id; 
+		echo " insie update<br />";	
 
 		if($this->form_validation->run() == false){
 			//Get the current list information
 			// $data['this_list'] = $this->List_model->get_list_data($list_id);
 			//Load view and layout
-						echo $list_id + "wrong<br />";
+		echo $list_id ;
+		echo " insie if<br />";
 
 			$data['main_content'] = 'lists/show/'+ $list_id;
 			$this->load->view('layouts/main', $data);
 		} else {
 
-			echo $list_id + "<br />";
+			echo $list_id; 
+			echo " inside else<br />";
 			
 			$data = [
 				'list_name' => $this->input->post('list_name'),
@@ -90,9 +105,10 @@ class Lists extends CI_Controller{
 			];
 		}
 		if($this->List_model->edit_list($list_id, $data)){
+
 				$this->session->set_flashdata('list_updated', 'Your task list has been updated successfully');
 				//Redirect to index page with the flashdata above
-				redirect('lists/show/'+ $list_id); // NOT WORKING BCOZ REDIRECTION IS HANDLED BY AJAX
+				redirect('lists/index'); // NOT WORKING BCOZ REDIRECTION IS HANDLED BY AJAX
 			}
 	}
 

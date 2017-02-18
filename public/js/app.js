@@ -1,5 +1,5 @@
 $(".create_list").click(function(event) {
-    event.preventDefault();
+    event.defaultPrevented();
 
     // console.log('clicked');
 
@@ -30,7 +30,7 @@ $(".edit_list").click(function(event) {
 });
 
 $('#list-update').click(function(event){
-      event.preventDefault();
+      
 
       // console.log('clicked');
       // console.log($('#list_namelist_id').val());
@@ -40,13 +40,13 @@ $('#list-update').click(function(event){
 
     $.ajax({
         method: 'post',
-        url: 'lists/update',
+        url: edit_url,
         data: {list_id: $('#list_id').val(), list_name: $('#list_name').val(), list_body: $('#list_body').val()}
     })
     .done(function(data){
       console.log(data);
 
-        window.location= "<?php echo base_url(); ?>lists/show/"+ $('#list_id').val();
+        window.location= show_url;
         $('#edit-modal').modal('hide');
     })
 })
