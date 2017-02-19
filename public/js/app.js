@@ -1,8 +1,8 @@
-$(".create_list").click(function(event) {
-    event.defaultPrevented();
+/****************** LIST Create MODAL ******************/
+$("#create_list").click(function(event) {
+    event.preventDefault();
 
     // console.log('clicked');
-
     
     $('#create-modal').modal();
 });
@@ -10,17 +10,18 @@ $(".create_list").click(function(event) {
 $('#list-create').click(function () {
     $.ajax({
        method: 'post',
-       url: 'lists/create',
+       url: create_url,
        data: { list_name:  $('#list_name').val(), list_body: $('#list_body').val()}
     })
     .done(function(msg){
         // $(taskTitle).text(msg['new-title']);
-        window.location="/lists/index";
+        window.location=lists_index_url;
         $('#create-modal').modal('hide');
     });
 });
 
 
+/****************** LIST EDIT MODAL ******************/
 $(".edit_list").click(function(event) {
     event.preventDefault();
 
@@ -30,14 +31,6 @@ $(".edit_list").click(function(event) {
 });
 
 $('#list-update').click(function(event){
-      
-
-      // console.log('clicked');
-      // console.log($('#list_namelist_id').val());
-      // console.log($('#').val());
-      // console.log($('#list_body').val());
-
-
     $.ajax({
         method: 'post',
         url: edit_url,

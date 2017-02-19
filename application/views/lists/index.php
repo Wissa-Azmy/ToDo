@@ -27,7 +27,7 @@
 <?php endforeach; ?>
 </ul>
 </br>
-<p><a href="#" id="create_list" class="btn btn-primary create_list"> Create a List</a></p>
+<p><a href="#" id="create_list" class="btn btn-primary create_list">Create a List</a></p>
 
 
 
@@ -60,3 +60,8 @@
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
+
+<script type="text/javascript">
+	var create_url = "<?php echo base_url(); ?>lists/create";
+	var lists_index_url = "<?php echo base_url(); ?>lists/index";
+</script>

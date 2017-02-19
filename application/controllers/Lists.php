@@ -66,7 +66,7 @@ class Lists extends CI_Controller{
 			if($this->List_model->create_list($data)){
 				$this->session->set_flashdata('list_created', 'Your task list has been created');
 				//Redirect to index page with the flashdata above
-				redirect('lists/index'); // NOT WORKING BCOZ REDIRECTION IS HANDLED BY AJAX
+				redirect(base_url('lists/index')); // NOT WORKING BCOZ REDIRECTION IS HANDLED BY AJAX
 			}
 		}
 	}
@@ -81,22 +81,16 @@ class Lists extends CI_Controller{
 		
 		$list_id = $this->input->post('list_id');
 
-		echo $list_id; 
-		echo " insie update<br />";	
 
 		if($this->form_validation->run() == false){
 			//Get the current list information
 			// $data['this_list'] = $this->List_model->get_list_data($list_id);
 			//Load view and layout
-		echo $list_id ;
-		echo " insie if<br />";
+		
 
 			$data['main_content'] = 'lists/show/'+ $list_id;
 			$this->load->view('layouts/main', $data);
 		} else {
-
-			echo $list_id; 
-			echo " inside else<br />";
 			
 			$data = [
 				'list_name' => $this->input->post('list_name'),
