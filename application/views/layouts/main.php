@@ -2,15 +2,22 @@
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!-- <link rel="stylesheet" type="text/css" href="<?php base_url(); ?>public/css/bootstrap.css">-->
+
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>public/css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>public/css/custom.css">
 
-<!-- <link rel="stylesheet" type="text/css" href="<?php base_url(); ?>public/css/custom.css">-->
+<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>public/css/profile-sidebar.css">
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="<?php echo base_url();?>public/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+
+<!-- <link href='http://fonts.googleapis.com/css?family=Droid+Serif|Open+Sans:400,700' rel='stylesheet' type='text/css'> -->
+
+	<!-- <link rel="stylesheet" href="<?php echo base_url();?>public/css/vertical-timeline-css/reset.css"> --><!-- CSS reset --> 
+	<link rel="stylesheet" href="<?php echo base_url();?>public/css/vertical-timeline-css/style.css"> <!-- Resource style -->
+	<script src="<?php echo base_url();?>public/js/vertical-timeline-js/modernizr.js"></script> <!-- Modernizr -->
 
 <title>ToDo Task Manager</title>
 </head>
@@ -152,6 +159,7 @@
 
 </body>
 <script src="<?php echo base_url();?>public/js/app.js"></script>
+<script src="<?php echo base_url();?>public/js/vertical-timeline-js/main.js"></script> <!-- Resource jQuery -->
 
 </html> 
 

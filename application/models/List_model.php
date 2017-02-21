@@ -10,6 +10,12 @@ class List_model extends CI_Model
 		return $query->result(); 	// WE USE RESULT TO RETURN ALL THE RECORDS
 	}
 
+	public function get_user_lists($user_id){
+		$this->db->order_by('create_date', 'asc');
+		$query = $this->db->get_where('lists', ['list_user_id' => $user_id]);
+		return $query->result();
+	}
+
 	public function get_list($id){
 		// $this->db->where('id', $id);
 		$query = $this->db->get_where('lists', ['id' => $id]);
