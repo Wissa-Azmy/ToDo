@@ -1,10 +1,8 @@
 <?php
-
-class Home extends CI_Controller{
+class Tasks extends CI_Controller{
 	public function index(){
 		if($this->session->userdata('logged_in')){
 			$user_id = $this->session->userdata('user_id');
-			$data['lists'] = $this->List_model->get_user_lists($user_id);
 			$data['tasks'] = $this->Task_model->get_user_tasks($user_id);
 		}
 
@@ -12,4 +10,3 @@ class Home extends CI_Controller{
 		$this->load->view('layouts/main', $data);
 	}
 }
-
