@@ -9,4 +9,23 @@ class Tasks extends CI_Controller{
 		$data['main_content'] = 'home';
 		$this->load->view('layouts/main', $data);
 	}
+
+
+	public function add(){
+		$this->form_validation->set_rules('task_name', 'Task Name', 'trim|required');
+
+		if($this->form_validation == null){
+
+		} else {
+			$data =['user_id' => $this->session->userdata('user_id'),
+					'list_id' => $this->input->post('list_id'),
+					'task_name' => $this->input->post('task_name'),
+					'task_body' => $this->input->post('task_body')];
+
+
+			if($this->Task_model->add_task($data)){
+
+			}
+		}
+	}
 }

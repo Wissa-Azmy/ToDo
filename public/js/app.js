@@ -43,3 +43,25 @@ $('#list-update').click(function(event){
         $('#edit-modal').modal('hide');
     })
 })
+
+/****************** ADD TASK WIDGET ******************/
+
+$('#add_task').click(function(event){
+    $.ajax({
+        method: 'post',
+        url: add_task_url,
+        data: {list_id: $('#list').val(), task_name: $('#task_name').val(), task_body: $('#task_body').val()}
+    })
+    .done(function(data){
+      console.log(data);
+
+        window.location= show_url;
+        $('#edit-modal').modal('hide');
+    })
+})
+
+/*************************** FontAwesome icons ToolTips *********************************/
+
+$(document).ready(function(){
+    $("[data-toggle=tooltip]").tooltip();
+});

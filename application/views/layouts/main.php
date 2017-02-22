@@ -7,6 +7,9 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>public/css/custom.css">
 
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>public/css/profile-sidebar.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+<link href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet"/>
+
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
@@ -158,8 +161,11 @@
 </div><!-- span9 -->
 
 </body>
+
 <script src="<?php echo base_url();?>public/js/app.js"></script>
 <script src="<?php echo base_url();?>public/js/vertical-timeline-js/main.js"></script> <!-- Resource jQuery -->
+
+
 
 </html> 
 
